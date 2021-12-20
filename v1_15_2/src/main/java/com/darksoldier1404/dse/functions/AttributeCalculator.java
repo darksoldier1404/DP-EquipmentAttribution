@@ -70,7 +70,7 @@ public class AttributeCalculator {
                 }
             }
         }
-        System.out.println("Total Damage: " + totalDamage);
+        
         return totalDamage;
     }
 

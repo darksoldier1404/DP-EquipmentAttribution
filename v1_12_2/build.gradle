@@ -9,7 +9,7 @@ tasks.withType(JavaCompile) {
 }
 
 group 'github.com/darksoldier1404'
-version = '1.0.0.21'
+version = '1.0.0.22'
 configurations {
     jar.archiveName = 'DP-EquipmentAttribution-_' + name + '-' + version + '.jar'
 }
