@@ -6,18 +6,18 @@ plugins {
 compileJava.options.encoding = 'UTF-8'
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
-    sourceCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_16
 }
 
 group 'github.com/darksoldier1404'
-version = '1.0.0.23'
+version = '1.0.0.24'
 
 task deleteMyFile(type: Delete) {
     delete "C:\\Minecraft Servers\\1.18 Play Ground\\plugins\\DP-EquipmentAttribution -" + version + ".jar"
 }
 build {
-    sourceCompatibility = 17
-    targetCompatibility = 17
+    sourceCompatibility = 16
+    targetCompatibility = 16
 }
 configurations {
     jar.archiveName = 'DP-EquipmentAttribution-_v1_18_1-' + version + '.jar'
