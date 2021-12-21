@@ -6,7 +6,7 @@ plugins {
 compileJava.options.encoding = 'UTF-8'
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
-    sourceCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_17
 }
 
 group 'github.com/darksoldier1404'
@@ -14,6 +14,10 @@ version = '1.0.0.22'
 
 task deleteMyFile(type: Delete) {
     delete "C:\\Minecraft Servers\\1.18 Play Ground\\plugins\\DP-EquipmentAttribution -" + version + ".jar"
+}
+build {
+    sourceCompatibility = 17
+    targetCompatibility = 17
 }
 configurations {
     jar.archiveName = 'DP-EquipmentAttribution-_v1_18_1-' + version + '.jar'
@@ -78,9 +82,6 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     compileOnly 'org.spigotmc:spigot-api:1.18-R0.1-SNAPSHOT'
     compileOnly 'com.darksoldier1404.duc:DP-UniversalCore:1.0.4.136:1.18.1'
-}
-java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
 test {
     useJUnitPlatform()
