@@ -5,13 +5,17 @@ plugins {
 compileJava.options.encoding = 'UTF-8'
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
-    sourceCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_16
 }
 
 group 'github.com/darksoldier1404'
 version = '1.0.0.22'
 configurations {
     jar.archiveName = 'DP-EquipmentAttribution-_' + name + '-' + version + '.jar'
+}
+build {
+    sourceCompatibility = 16
+    targetCompatibility = 16
 }
 repositories {
     mavenCentral()
