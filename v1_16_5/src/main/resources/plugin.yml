@@ -1,5 +1,5 @@
 name: DP-EquipmentAttribution
-version: 1.0.0.25
+version: 1.0.0.26
 main: com.darksoldier1404.dse.EquipmentAttribution
 api-version: 1.16
 authors: [ DEAD_POOLIO_ ]

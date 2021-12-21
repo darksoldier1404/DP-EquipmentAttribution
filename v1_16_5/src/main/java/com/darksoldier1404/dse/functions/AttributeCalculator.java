@@ -65,7 +65,7 @@ public class AttributeCalculator {
             }
         }else{
             if(criticalChance > 0) {
-                if (Math.random() * 100 >= criticalChance) {
+                if (Math.random() * 100 <= criticalChance) {
                     totalDamage *= criticalAmount;
                 }
             }
