@@ -9,7 +9,7 @@ tasks.withType(JavaCompile) {
 }
 
 group 'github.com/darksoldier1404'
-version = '1.0.0.26'
+version = '1.0.0.27'
 configurations {
     jar.archiveName = 'DP-EquipmentAttribution-_' + name + '-' + version + '.jar'
 }
@@ -19,12 +19,8 @@ build {
 }
 repositories {
     mavenCentral()
-    maven { url "https://repo.dmulloy2.net/repository/public/" }
     maven {
-        url 'https://repo.spring.io/plugins-release/'
-    }
-    maven {
-        url "http://dpnw.site:8081/repository/maven-releases/"
+        url "http://dpnw.site:8081/repository/maven-public/"
         allowInsecureProtocol = true
     }
 }
@@ -33,8 +29,9 @@ dependencies {
     implementation 'org.jetbrains:annotations:20.1.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    compileOnly 'org.spigotmc:spigot:1.17.1-R0.1-SNAPSHOT'
-    compileOnly 'com.darksoldier1404.duc:DP-UniversalCore:1.0.4.136:1.17.1'
+    compileOnly 'org.bukkit.craftbukkit:craftbukkit:R0.1:1.17'
+    compileOnly 'org.spigotmc:spigot-api:R0.1:1.17'
+    compileOnly 'com.darksoldier1404.dppc:DPP-Core:1.17.1-SNAPSHOT'
 }
 
 test {
