@@ -2,7 +2,7 @@ package com.darksoldier1404.dse.functions;
 
 import com.darksoldier1404.dse.EquipmentAttribution;
 import com.darksoldier1404.dse.enums.AttributeType;
-import com.darksoldier1404.duc.utils.NBT;
+import com.darksoldier1404.dppc.utils.NBT;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;

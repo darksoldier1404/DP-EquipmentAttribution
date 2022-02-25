@@ -1,7 +1,7 @@
 package com.darksoldier1404.dse.functions;
 
 import com.darksoldier1404.dse.EquipmentAttribution;
-import com.darksoldier1404.duc.utils.NBT;
+import com.darksoldier1404.dppc.utils.NBT;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Player;
