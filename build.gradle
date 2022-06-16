@@ -1,27 +1,26 @@
-import static sun.security.util.Debug.println
-
 plugins {
     id 'java'
 }
+
+group 'com.darksoldier1404'
+version = '1.0.0.29'
+
 compileJava.options.encoding = 'UTF-8'
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
-    sourceCompatibility = JavaVersion.VERSION_16
-}
-
-group 'github.com/darksoldier1404'
-version = '1.0.0.28'
-
-task deleteMyFile(type: Delete) {
-    delete "C:\\Minecraft Servers\\1.18 Play Ground\\plugins\\DP-EquipmentAttribution -" + version + ".jar"
-}
-build {
-    sourceCompatibility = 16
-    targetCompatibility = 16
 }
 configurations {
-    jar.archiveName = 'DP-EquipmentAttribution-_v1_19-' + version + '.jar'
+    jar.archiveName = name + '-_v1_19-' + version + '.jar'
 }
+jar {
+    destinationDirectory.set(file("$rootDir/jars"))
+}
+
+build {
+    sourceCompatibility = 17
+    targetCompatibility = 17
+}
+
 task DS_BUILD {
     doFirst {
         def v = buildFile.getText().find(version)
@@ -62,19 +61,16 @@ task DS_BUILD {
 repositories {
     mavenCentral()
     maven {
-        url "http://dpnw.site:8081/repository/maven-public/"
+        url "http://dpp.dpnw.site:8081/repository/maven-public/"
         allowInsecureProtocol = true
     }
 }
 
 dependencies {
-    implementation 'org.jetbrains:annotations:20.1.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    compileOnly 'org.bukkit.craftbukkit:craftbukkit:R0.1:1.19'
-    compileOnly 'org.spigotmc:spigot-api:R0.1:1.19'
-    compileOnly 'com.darksoldier1404.dppc:DPP-Core:1.19-SNAPSHOT'
-}
-test {
-    useJUnitPlatform()
+    implementation 'org.jetbrains:annotations:23.0.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    compileOnly 'org.bukkit.craftbukkit:craftbukkit:R0.1:1.18.2'
+    compileOnly 'org.spigotmc:spigot-api:R0.1:1.18.2'
+    compileOnly 'com.darksoldier1404.dppc:DPP-Core:1.18.2-SNAPSHOT'
 }
