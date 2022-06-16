@@ -1,7 +1,7 @@
 name: DP-EquipmentAttribution
-version: 1.0.0.27
+version: 1.0.0.28
 main: com.darksoldier1404.dse.EquipmentAttribution
-api-version: 1.18
+api-version: 1.19
 authors: [ DEAD_POOLIO_ ]
 depend:
   - DPP-Core
